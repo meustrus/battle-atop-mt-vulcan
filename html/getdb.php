@@ -81,10 +81,23 @@ if (!function_exists('getlevel')) {
 }
 
 if (!function_exists('getdb')) {
-  function getdb() {
+  function getdb($attempt = 0) {
     static $pdo;
     if (!isset($pdo)) {
-      $pdo = new PDO('mysql:dbname=rpgpal_padb;host=localhost', 'rpgpal_padb', '22SilentUlnaes');
+      try {
+        $pdo = new PDO(
+          "mysql:dbname={$_ENV['MYSQL_DATABASE']};host={$_ENV['MYSQL_HOST']}",
+          $_ENV['MYSQL_USER'],
+          $_ENV['MYSQL_PASSWORD']
+        );
+      } catch (Exception $e) {
+        if ($attempt < 6) {
+          sleep(5);
+          return getdb($attempt + 1);
+        } else {
+          throw $e;
+        }
+      }
     }
     return $pdo;
   }
