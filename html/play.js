@@ -200,28 +200,17 @@ function play($, meName, otherName) {
 
   // Create a mute button.
   var muted = false;
-  var $mute = $("<div></div>");
-  $mute.css({
-    "background-image": "url(img/mute.png)",
-    "background-repeat": "no-repeat",
-    "background-position": "0 0",
-    "position": "absolute",
-    "right": "0",
-    "top": "0",
-    "width": "48px",
-    "height": "48px",
-    "cursor": "pointer",
-  });
-  $("body").append($mute);
+  var $mute = $("<span class='btn'></span>");
+  $("#mute").append($mute);
   $mute.click(function() {
     if (muted) {
       soundManager.unmute();
-      $mute.css("background-position", "0 0");
+      $mute.removeClass("enabled");
       muted = false;
     }
     else {
       soundManager.mute();
-      $mute.css("background-position", "-48px 0");
+      $mute.addClass("enabled");
       muted = true;
     }
   });

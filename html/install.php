@@ -1,6 +1,8 @@
 <?php
 
-$sql = <<<SQL
+require_once 'getdb.php';
+
+getdb()->query(<<<SQL
   CREATE TABLE IF NOT EXISTS players (
     username varchar(32) NOT NULL,
     lastaccess datetime,
@@ -9,7 +11,5 @@ $sql = <<<SQL
     action varchar(255) NULL,
     PRIMARY KEY (username)
   )
-SQL;
-
-$pdo = include('getdb.php');
-$pdo->query($sql);
+SQL
+);

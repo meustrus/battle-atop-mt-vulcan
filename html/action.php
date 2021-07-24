@@ -1,6 +1,6 @@
 <?php
 
-include 'getdb.php';
+require_once 'getdb.php';
 
 if (!empty($_GET['me'])) {
   if (!empty($_GET['level'])) {

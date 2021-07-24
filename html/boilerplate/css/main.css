@@ -126,6 +126,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #886c44;
+    text-align: center;
 }
 
 input::-moz-focus-inner {
@@ -133,7 +134,7 @@ input::-moz-focus-inner {
     border: 0;
 }
 
-#playingas, #playingas * {
+#playingas, #playingas > * {
   text-align: center;
   background: #fcf6f2;
   padding: 0;
@@ -145,7 +146,7 @@ input::-moz-focus-inner {
   margin-bottom: 2em;
 }
 
-#playingas * {
+#playingas > * {
   position: relative;
   bottom: -.65em;
   margin: 0 -.667em;
@@ -153,6 +154,43 @@ input::-moz-focus-inner {
   font-size: 1.5em;
 }
 
+#player-select {
+  margin: 0 auto;
+  width: 32em;
+}
+
+#back-btn {
+  left: .125em;
+  position: absolute;
+  top: .125em;
+}
+
+#back-btn > * {
+  font-size: 2em;
+}
+
+#mute {
+  position: absolute;
+  right: .125em;
+  top: .125em;
+}
+
+#mute span {
+  background-image: url(../../img/mute.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+
+#mute span:hover, #mute span:active {
+  background-position-y: -48px;
+}
+
+#mute span.enabled {
+  background-position-x: -48px;
+}
 
 
 

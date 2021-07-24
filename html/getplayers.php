@@ -1,9 +1,5 @@
 <?php
 
-include('getdb.php');
+require_once('getdb.php');
 
-$prefix = '';
-foreach (getplayers(@$_GET['other'], @$_GET['me']) as $row) {
-  echo $prefix, $row['username'];
-  $prefix = ':';
-}
+echo json_encode(getplayers(FALSE, @$_GET['me']));
