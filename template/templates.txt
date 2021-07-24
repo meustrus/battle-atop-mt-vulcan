@@ -1,0 +1,12 @@
+# Templates added by this project:
+
+PageTop        # <?xml?> and/or <!DOCTYPE> statements
+PageHead       # All markup before the HTML body
+PageAttributes # HTML attributes of the <html> element
+HeadElem       # Entire contents of the <head> element
+Title          # Contents of the <title> element
+Charset        # Character set defined by <meta http-equiv="Content-Type" />
+Head           # Additional <head> elements; called for each registered template
+BodyAttributes # HTML attributes of the <body> element
+BodyHead       # First markup in the body; called for each registered template
+Foot           # Closing markup; called for each registered template

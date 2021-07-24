@@ -1,0 +1,2 @@
+# Requires PHP version 4 or greater
+>php/4

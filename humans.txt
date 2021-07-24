@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    J T Schwartz -- Designer and Developer -- @jtschwartzb
+
+# THANKS
+
+    Mike and Jerry (Tycho and Gabe) of Penny Arcade.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
